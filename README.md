@@ -17,12 +17,12 @@
 - Material UI
 # 🪄 Prototype 
 [Figma ](https://www.figma.com/file/9iVvp99qW9DkfCnEYEBmZH/house-hunting?type=design&node-id=0-1&mode=design&t=2Fs0qDBZR96vnU1Z-0)
-## 🎬 Live Demo 
+# 🎬 Live Demo 
 
 in progess :smile:
 
 
-## 📝 User Story
+# 📝 User Story
 ### **User Type:** 
 >#### Prospective Home Buyer
 
@@ -33,7 +33,7 @@ in progess :smile:
 >#### As a prospective home buyer, I want to utilize the House Hunt website to find my dream home. I am looking to streamline my property search process, view detailed property information, and save houses that I'm interested in.
 
 
-## 👤User Journey:
+# 👤User Journey:
 
 ### 1-Sign Up:
 
@@ -97,7 +97,7 @@ The property is added to my favorites list.
 
 >The House Hunt website provides me with a seamless experience to search for properties, view detailed information, save favorites, and manage my profile. This comprehensive solution makes my house hunting journey efficient and enjoyable. By showcasing my interaction with this website, I can demonstrate my ability to design and develop user-friendly web applications to potential employers or collaborators.
 
-## 👥 Team
+# 👥 Team
 
 👤 **Lead Mentor : Yasmeen Atallah**
 
@@ -108,11 +108,11 @@ The property is added to my favorites list.
 - LinkedIn: [Mai Zourob](https://www.linkedin.com/in/mai-zourob-647087272/)
 
 
-## 🤝 Contributing
+# 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-## 🎗️ Show your support
+# 🎗️ Show your support
 
 Give a ⭐️ if you like this project!
 
