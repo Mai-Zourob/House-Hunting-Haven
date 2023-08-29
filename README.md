@@ -34,7 +34,7 @@ in progess :smile:
 
 
 # 👤User Story:
-## As a user i can do this 👇🏼
+### As a user i can do this 👇🏼
 ### 1-Sign Up:
 
 >- I visit the Haven website.
