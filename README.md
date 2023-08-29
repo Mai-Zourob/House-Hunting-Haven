@@ -22,7 +22,7 @@
 in progess :smile:
 
 
-# 📝 User Story
+# 📝 User Journey
 ### **User Type:** 
 >#### Prospective Home Buyer
 
@@ -33,7 +33,7 @@ in progess :smile:
 >#### As a prospective home buyer, I want to utilize the House Hunt website to find my dream home. I am looking to streamline my property search process, view detailed property information, and save houses that I'm interested in.
 
 
-# 👤User Journey:
+# 👤User Story:
 
 ### 1-Sign Up:
 
