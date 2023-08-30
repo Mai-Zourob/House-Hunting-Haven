@@ -1,0 +1,193 @@
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.page-content {
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-bottom: 1em;
+  width: 320px;
+  height: 360px !important;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+}
+.css-6yp9j-MuiGrid-root > .MuiGrid-item {
+  padding-top: 65px !important;
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+}
+.card:before {
+  width: 100%;
+  height: 110%;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(11.7%, rgba(0, 0, 0, 0.009)),
+    color-stop(22.1%, rgba(0, 0, 0, 0.034)),
+    color-stop(31.2%, rgba(0, 0, 0, 0.072)),
+    color-stop(39.4%, rgba(0, 0, 0, 0.123)),
+    color-stop(46.6%, rgba(0, 0, 0, 0.182)),
+    color-stop(53.1%, rgba(0, 0, 0, 0.249)),
+    color-stop(58.9%, rgba(0, 0, 0, 0.32)),
+    color-stop(64.3%, rgba(0, 0, 0, 0.394)),
+    color-stop(69.3%, rgba(0, 0, 0, 0.468)),
+    color-stop(74.1%, rgba(0, 0, 0, 0.54)),
+    color-stop(78.8%, rgba(0, 0, 0, 0.607)),
+    color-stop(83.6%, rgba(0, 0, 0, 0.668)),
+    color-stop(88.7%, rgba(0, 0, 0, 0.721)),
+    color-stop(94.1%, rgba(0, 0, 0, 0.762)),
+    to(rgba(0, 0, 0, 0.79))
+  );
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-transition: -webkit-transform var(--d) var(--e);
+  transition: -webkit-transform var(--d) var(--e);
+  transition: transform var(--d) var(--e);
+  transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
+  z-index: 1;
+}
+.css-mg4k7d-MuiPaper-root-MuiCard-root {
+  padding: 0 0 0 0;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 800 !important;
+  line-height: 1.2;
+  color: #fff !important;
+  text-transform: uppercase;
+  margin-top: 2.2em !important;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: #fff !important;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #d90000;
+  border: none;
+}
+.btn:hover {
+  background-color: #d90000 !important;
+}
+.btn:focus {
+  outline: 1px dashed #d90000;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .content {
+    -webkit-transform: translateY(calc(100% - 4.5rem));
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+    transform: translateY(1rem);
+  }
+
+  .card:hover,
+  .card:focus-within {
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  .card:hover:before,
+  .card:focus-within:before {
+    -webkit-transform: translateY(-4%);
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+  .card:focus-within:after {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+  .card:focus-within .content {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+  .card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition-delay: calc(var(--d) / 8);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .card:focus-within:before,
+  .card:focus-within:after,
+  .card:focus-within .content,
+  .card:focus-within .content > *:not(.title) {
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+  }
+}

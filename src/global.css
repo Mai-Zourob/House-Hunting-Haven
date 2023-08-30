@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moul:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-roboto: Roboto;
+  --font-lato: Lato;
+  --font-montserrat: Montserrat;
+  --font-lexend: Lexend;
+  --font-space-mono: "Space Mono";
+  --font-moul: Moul;
+  --font-fredoka-one: "Fredoka One";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-6xl: 25px;
+  --font-size-sm: 14px;
+  --font-size-smi: 13px;
+  --font-size-xl: 20px;
+  --font-size-21xl: 40px;
+  --font-size-mini: 15px;
+  --font-size-3xl: 22px;
+  --font-size-16xl: 35px;
+  --font-size-11xl: 30px;
+  --font-size-5xl: 24px;
+  --font-size-2xl: 21px;
+  --font-size-lg: 18px;
+  --font-size-lgi: 19px;
+  --font-size-mid: 17px;
+
+  /* Colors */
+  --color-gray-100: #7d7d7d;
+  --colors-neutral-black: #131313;
+  --color-gray-200: rgba(0, 0, 0, 0.9);
+  --color-gray-300: rgba(0, 0, 0, 0.65);
+  --color-gray-400: rgba(0, 0, 0, 0.69);
+  --color-gray-500: rgba(255, 255, 255, 0.85);
+  --color-gray-600: rgba(0, 0, 0, 0.28);
+  --colors-neutral-white: #fff;
+  --light-secondary: #e3ebfd;
+  --color-steelblue-100: #1b67a4;
+  --color-steelblue: #0e6ba8;
+  --color-steelblue-200: rgba(27, 103, 164, 0.87);
+  --color-ghostwhite: #f6faff;
+  --neutral-100: #f0f3fd;
+  --color-gainsboro: rgba(217, 217, 217, 0);
+  --color-black: #000;
+  --color-darkgray: #ababab;
+  --color-red-100: #d90000;
+  --color-red-200: rgba(217, 0, 0, 0.9);
+  --color-whitesmoke-100: #f2f2f2;
+  --color-whitesmoke-200: #f0f0f0;
+  --color-dimgray-100: #5b5b5b;
+  --color-dimgray-200: #4f4f4f;
+  --color-darkslategray-100: #494949;
+  --neutral-700: #3c4563;
+  --color-darkslategray-200: #132a13;
+  --mrt-app-neutral-01: #626687;
+  --yellow-500: #f59e0b;
+
+  /* Gaps */
+  --gap-131xl: 150px;
+  --gap-3xs: 10px;
+  --gap-34xl: 53px;
+  --gap-base: 16px;
+
+  /* Paddings */
+  /* --padding-3xs: 10px;
+  --padding-5xl: 24px;
+  --padding-9xs: 4px;
+  --padding-6xs: 7px; */
+
+  /* border radiuses */
+  --br-11xl: 30px;
+  --br-3xs: 10px;
+  --br-13xl: 32px;
+  --br-3xl: 22px;
+  --br-xl: 20px;
+  --br-5xl: 24px;
+  --br-31xl: 50px;
+  --br-10xs: 3px;
+  --br-9xs: 4px;
+}

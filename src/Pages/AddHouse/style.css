@@ -1,0 +1,40 @@
+.sideBarContainer {
+  background-color: #1b67a4 !important;
+}
+
+.MuiTabs-root,
+.MuiTabs-vertical,
+.tabs,
+.css-1g4ac1o-MuiTabs-root {
+  background-color: #1b67a4 !important ;
+}
+.photo {
+  background-color: #dbdbdb;
+  border: 1px solid #a3a3a3;
+  box-sizing: border-box;
+  width: 140px !important;
+  height: 110px !important;
+}
+.first3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.divnum {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+/* .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 25px !important;
+} */
+
+/* .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 25px !important;
+} */
+.css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root{
+  width: 70% !important;
+  height: 25vh !important;
+}

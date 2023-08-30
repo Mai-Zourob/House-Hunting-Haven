@@ -1,0 +1,58 @@
+.form-parent {
+  margin-top: 4em;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.icon {
+  margin-top: 1.5em !important;
+  margin-left: 0.5em;
+}
+
+#item1 {
+  width: 1165px;
+  height: 90px;
+  margin-left: 3em;
+  background-color: #f2f2f2;
+}
+#item2 {
+  margin-top: 1.2em;
+  width: 1165px;
+  height: 90px;
+  margin-left: 3em;
+  background-color: #f2f2f2;
+}
+#item3 {
+  margin-top: 1.2em;
+  width: 1165px;
+  height: 90px;
+  margin-left: 3em;
+  background-color: #f2f2f2;
+}
+.b15 {
+  margin-left: 40px;
+}
+.des {
+  margin-left: 100px;
+}
+
+.logo {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+}
+.buttom {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+}
+.para {
+  margin-top: 1em;
+  align-items: center;
+  justify-content: center;
+}
+.join-today {
+  margin-top: 1em;
+}

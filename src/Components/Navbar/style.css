@@ -1,0 +1,39 @@
+.css-jpn44u-MuiPaper-root-MuiAppBar-root {
+  color: #fff;
+  background-color: #0e6ba8 !important;
+  height: 65px !important;
+}
+.css-1q39md6-MuiButtonBase-root-MuiButton-root {
+  font-weight: bolder !important;
+  margin-right: 3em !important;
+}
+.img {
+  width: 100px;
+  height: 30px;
+}
+
+.css-1cwdt9v-MuiGrid-root {
+  width: 100% !important;
+}
+@media (min-width: 600px) {
+  .css-r6ewbb-MuiToolbar-root {
+    min-height: 64px;
+    padding-right: 19px;
+  }
+}
+.MuiButtonBase-root {
+  height: 40px !important;
+}
+
+
+/* .nav-link::before {
+  content: "" ;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 5px;
+  width: 0;
+  background: var(--raw-seinna);
+  transition: var(--transition-1);
+} */
