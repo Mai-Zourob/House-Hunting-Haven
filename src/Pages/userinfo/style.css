@@ -1,0 +1,36 @@
+table {
+  height: 600px !important;
+}
+.profile {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px !important;
+  text-align: start !important;
+}
+.info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
+  margin-top: -66px;
+}
+.profile-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.btn {
+  height: 50px;
+}

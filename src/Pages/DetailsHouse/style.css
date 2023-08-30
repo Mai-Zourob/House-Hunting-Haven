@@ -1,0 +1,121 @@
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6em;
+}
+.ready-to-sell {
+  color: #f59e0b;
+  text-transform: capitalize;
+  font-weight: bolder;
+  display: inline-block;
+  width: 20em;
+  margin-top: 1.5em;
+}
+
+.title {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  color: #000 !important;
+  text-transform: uppercase;
+  font-weight: bolder !important;
+  margin: 0 !important;
+}
+.type {
+  font-size: large;
+  font-weight: bold !important;
+  color: #000 !important;
+}
+.city {
+  font-size: 1em;
+  color: #7d7d7d;
+}
+
+.loaction svg {
+  font-size: 2em;
+  color: #000;
+  margin-left: -0.32em !important;
+}
+
+.loaction {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+  color: #7d7d7d;
+  font-weight: bolder;
+}
+
+.room {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 11em;
+}
+
+.details2 {
+  display: flex;
+  align-items: center;
+  gap: 13.25em;
+}
+hr {
+  font-weight: bolder;
+  height: 4px;
+  background-color: #f0f3fd;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.num {
+  font-size: 1.2em !important;
+  margin-top: 2em !important;
+  color: #3c4563;
+  font-weight: bold !important;
+}
+.num1 {
+  font-size: 1.2em !important;
+  color: #3c4563 !important;
+  font-weight: bold !important;
+}
+.priceDetails {
+  color: #000;
+  font-weight: bolder !important;
+  margin-left: -1.5em !important;
+}
+
+.type {
+  padding-top: 0.5em;
+  color: #000;
+}
+
+.descDetails {
+  width: 30em;
+  padding-top: 1.2em;
+  padding-bottom: 1em;
+  color: #7d7d7d;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  padding-top: 1.3em;
+  color: #3c4563;
+}
+
+.icon2 {
+  width: 50px !important;
+  height: 27px !important;
+  color: #888b97 !important;
+  padding-right: 0.25em;
+  margin-left: -0.5em;
+}
+.icon {
+  width: 55px !important;
+  height: 30px !important;
+  color: #888b97;
+  padding-right: 0.2em;
+  margin-left: -0.5em !important;
+}
+img,
+svg {
+  vertical-align: bottom !important;
+}
