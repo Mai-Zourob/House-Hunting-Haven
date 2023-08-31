@@ -15,12 +15,6 @@ import DialogActions from "@mui/material/DialogActions";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import "../../Pages/userinfo/style.css";
-// import { useNavigate } from "react-router-dom";
-// function NotFound() {
-//   const navigate = useNavigate();
-//   const handleClick = () => {
-//     navigate("/");
-//   };
 function UserInfo() {
   const [user, setUser] = useState({});
   const [username, setUsername] = useState();
@@ -55,7 +49,7 @@ function UserInfo() {
       const user = { username, mobile, email };
 
       const response = await fetch(
-        "https://my-json-server.typicode.com/SajaRa20/newapi/users",
+        "https://my-json-server.typicode.com/urfavmai/mockread-api/users",
         {
           method: "PATCH",
           headers: {
@@ -75,7 +69,7 @@ function UserInfo() {
     (async () => {
       try {
         const response = await fetch(
-          "https://my-json-server.typicode.com/SajaRa20/newapi/users"
+          "https://my-json-server.typicode.com/urfavmai/mockread-api/users"
         );
         if (response.ok) {
           const data = await response.json();
@@ -111,27 +105,42 @@ function UserInfo() {
           <div className="info1">Phone Number :</div>
         <div className="info2">0597200522</div>
         <div className="profile-btn">
+      
         <Button
-          className="btn"
-          sx={{ width: 296 }}
-          variant="outlined"
-          color="error"
-          // onClick={handleClick}
-          
-        >
-          Edit Profile
-        </Button>
-        <Button
+         onClick={() => setOpen(true)}
           className="btn"
           sx={{ width: 296 }}
           variant="contained"
           color="error"
-          // onClick={openPopup}
         >
           Delete my account
         </Button>
         </div>
         </div>
+        <Dialog open={open} onClose={() => setOpen(false)}>
+              <DialogTitle>Confirm Updating</DialogTitle>
+              <DialogContent>
+                {" "}
+                Are you sure you want to update this personal?
+              </DialogContent>
+              <DialogActions>
+                <Button
+                  onClick={() => setOpen(false)}
+                  className="btn-Dialog-Cancel"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  onClick={() => {
+                    handleSubmit();
+                    setOpen(false);
+                  }}
+                  className="btn-Dialog-Updat"
+                >
+                  Update
+                </Button>
+              </DialogActions>
+            </Dialog>
         </TableBody>
       </Table>
     </TableContainer>

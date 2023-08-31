@@ -21,27 +21,7 @@ import BathtubIcon from "@mui/icons-material/Bathtub";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import "./style.css";
 function Favorite() {
-  // const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  //   [`&.${tableCellClasses.head}`]: {
-  //     backgroundColor: "#2A5555",
-  //     color: theme.palette.common.white,
-  //     fontSize: 20,
-  //   },
-  //   [`&.${tableCellClasses.body}`]: {
-  //     fontSize: 16,
-  //     color: "707070",
-  //   },
-  // }));
 
-  // const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  //   "&:nth-of-type(odd)": {
-  //     backgroundColor: theme.palette.action.hover,
-  //   },
-  //   // hide last border
-  //   "&:last-child td, &:last-child th": {
-  //     border: 0,
-  //   },
-  // }));
 
   const [houses, setHouses] = useState([]);
   const [errorMsg, setError] = useState("");
@@ -67,8 +47,6 @@ function Favorite() {
       if (response.ok) {
         setOpenalert(true);
       }
-
-      // Assuming you want to refresh the list of houses after deletion
       const updatedHouses = houses.filter((house) => house.id !== houseId);
       setHouses(updatedHouses);
     } catch (error) {

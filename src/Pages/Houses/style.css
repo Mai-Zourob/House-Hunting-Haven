@@ -15,19 +15,19 @@
 .serach-btn {
   position: absolute;
   border: none;
-  background-color: #F8C405;
+  background-color: #f8c405;
   height: 50px;
   width: 120px;
   right: 210px;
- font-weight: bolder;
+  font-weight: bolder;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .searchicon {
-  color: #1E1E1E;
-  font-weight: bolder ;
+  color: #1e1e1e;
+  font-weight: bolder;
 }
 .filter {
   margin-left: 4em;
@@ -41,17 +41,17 @@
   flex-direction: row !important;
   gap: 4em;
 }
-#location{
+#location {
   margin-top: -1.7em !important;
 }
-#category{
+#category {
   margin-top: -1.65em !important;
 }
 .MuiInputBase-root {
   width: 200px;
   height: 50px;
 }
-.price{
+.price {
   display: flex;
   flex-direction: row !important;
   gap: 1em;
@@ -59,10 +59,10 @@
   margin-right: 3em;
   margin-left: -2.1em;
 }
-h3{
+h3 {
   margin-top: 0.3em;
-  color: rgba(0, 0, 0, 0.70);
-  margin-left:2.5em !important;
+  color: rgba(0, 0, 0, 0.7);
+  margin-left: 2.5em !important;
 }
 .css-187mznn-MuiSlider-root {
   border-radius: 12px;
@@ -73,15 +73,14 @@ h3{
   touch-action: none;
   color: #070707 !important  ;
   -webkit-tap-highlight-color: transparent;
-  height: 9px !important;
+  height: 7px !important;
   width: 150px !important;
   padding: 13px 0;
 }
 .available-houses1 {
-  
   color: rgba(0, 0, 0, 0.6);
   font-weight: bolder;
 }
-.container{
+.container {
   padding-top: 3em;
 }

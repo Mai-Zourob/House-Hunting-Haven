@@ -10,6 +10,7 @@ import AuthContext from "../../Components/Context/AuthContext";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonIcon from "@mui/icons-material/Person";
 import LockIcon from "@mui/icons-material/Lock";
+import PhoneRoundedIcon from "@mui/icons-material/LocalPhone";
 import validationSchema from "../../Utils/validations/login";
 import validationRegister from "../../Utils/validations/register";
 
@@ -21,8 +22,11 @@ function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState();
-  
+  const [username, setUsername] = useState();
+  const [passwordRe, setPasswordRe] = useState("");
+  const [mobile, setMobile] = useState("");
   const validationErrors = {};
+  const validationErrorsRe = {};
   const [open, setOpen] = useState(false);
 
   const handleClose = (event, reason) => {
@@ -32,10 +36,16 @@ function Login() {
     setOpen(false);
   };
 
-  // const handleSignup = (event) => {
-  //   navigate("/register");
-  // };
+  const handleusername = (event) => {
+    setUsername(event.target.value);
+  };
+  const handlepasswordRe = (event) => {
+    setPasswordRe(event.target.value);
+  };
 
+  const handlemobile = (event) => {
+    setMobile(event.target.value);
+  };
   const handleName = (event) => {
     setName(event.target.value);
   };
@@ -77,27 +87,26 @@ function Login() {
       setError(validationErrors);
     }
   };
-  // function Register() {
-  //   const navigate = useNavigate();
 
-  //   const handleSignin = (event) => {
-  //     navigate("/login");
-  //   };
   const toggleForm = () => {
     setIsSignUp((prevState) => !prevState);
   };
-  const handleAddUser = async (event) => {
+
+  const handleSubmitR = async (event) => {
     event.preventDefault();
     try {
-      await validationRegister.validate({username, password,confirmPassword, mobile}, { abortEarly: false });
+      await validationRegister.validate(
+        { username, passwordRe, mobile },
+        { abortEarly: false }
+      );
 
       const userData = {
         username,
-        password,
+        passwordRe,
         mobile,
       };
       const response = await fetch(
-        "https://my-json-server.typicode.com/SajaRa20/newapi/users",
+        "https://my-json-server.typicode.com/urfavmai/mockread-api/users",
         {
           method: "POST",
           headers: {
@@ -107,22 +116,18 @@ function Login() {
         }
       );
       if (response.ok) {
-        const data = await response.json();
-        clear();
-        setOpen(true);
-        handleClose();
-        navigate("/login");
-      } 
-    }  catch (error) {
+        navigate("/");
+      }
+    } catch (error) {
       if (error instanceof yup.ValidationError) {
-        error.inner.forEach(err => {
-          validationErrors[err.path] = err.message;
+        error.inner.forEach((err) => {
+          validationErrorsRe[err.path] = err.message;
         });
       }
-      setError(validationErrors);
-      console.log(validationErrors);
+      setError(validationErrorsRe);
+      console.log(validationErrorsRe);
     }
-   }
+  };
 
   return (
     <Container maxWidth="lg" className="divregister">
@@ -148,38 +153,47 @@ function Login() {
                       <div className="card-front">
                         <div className="center-wrap">
                           <div className="section text-center">
-                            <h4 className="mb-4 pb-3">Log In</h4>
+                            <h4 className=" pb-3">LOG IN</h4>
                             <div className="form-group">
-                              <PersonIcon />
-                              <input
-                                type="text"
-                                name="logname"
-                                className="form-style"
-                                placeholder="Your Full Name"
-                                id="logname"
-                                autoComplete="off"
-                                onChange={handleName}
-                                value={name}
-                              />
+                              <div class="input-wrapperr">
+                                <input
+                                  type="text"
+                                  name="name"
+                                  className="form-style"
+                                  id="logname"
+                                  required
+                                  placeholder="Your Full Name"
+                                  class="inputfield"
+                                  autoComplete="off"
+                                  onChange={handleName}
+                                  value={name}
+                                />
+
+                                <PersonIcon className="noic" />
+                              </div>
                               {error && (
                                 <p variant="p" className="error">
                                   {error.name}
                                 </p>
                               )}
                             </div>
-                            <div className="form-group mt-2">
-                              <LockIcon />
+                            <div class="input-wrapperr">
                               <input
                                 type="password"
                                 name="logpass"
                                 className="form-style"
-                                placeholder="Your Password"
                                 id="logpass"
+                                required
+                                placeholder="Your Password"
+                                class="inputfield"
                                 autoComplete="off"
                                 onChange={handlePassword}
                                 value={password}
                               />
-                                  {error && (
+                              <LockIcon className="noic" />
+                            </div>
+                            <div className="form-group mt-2">
+                              {error && (
                                 <p variant="p" className="error">
                                   {error.password}
                                 </p>
@@ -199,7 +213,7 @@ function Login() {
                               href="#"
                               className="btn mt-4"
                             >
-                             Log In
+                              Log In
                             </a>
                           </div>
                         </div>
@@ -207,47 +221,80 @@ function Login() {
                       <div className="card-back">
                         <div className="center-wrap">
                           <div className="section text-center">
-                            <h4 className="mb-4 pb-3">Sign Up</h4>
+                            <h4 className=" pb-3">SING UP</h4>
                             <div className="form-group">
-                              <PersonIcon />
-                              <input
-                                type="text"
-                                name="logname"
-                                className="form-style"
-                                placeholder="Your Full Name"
-                                value={username}
-                                onChange={handleusername}
-                                id="logname"
-                                autoComplete="off"
-                              />
+                              <div class="input-wrapperr">
+                                <input
+                                  type="text"
+                                  name="name"
+                                  className="form-style"
+                                  id="logname"
+                                  required
+                                  placeholder="Your Full Name"
+                                  class="inputfield"
+                                  autoComplete="off"
+                                  onChange={handleName}
+                                  value={name}
+                                />
+
+                                <PersonIcon className="noic" />
+                              </div>
+                              {error && (
+                                <p variant="p" className="error">
+                                  {error.name}
+                                </p>
+                              )}
                             </div>
-                            <div className="form-group mt-2">
-                              <EmailIcon />
-                              <input
-                                type="email"
-                                name="logemail"
-                                className="form-style"
-                                placeholder="Your Mobile"
-                                id="logemail"
-                                autoComplete="off"
-                                value={mobile}
-                                onChange={handlemobile}
-                              />
+                            <div className="form-group">
+                              <div class="input-wrapperr">
+                                <input
+                                  type="text"
+                                  name="mobile"
+                                  className="form-style"
+                                  id="logname"
+                                  required
+                                  placeholder="Your mobile"
+                                  class="inputfield"
+                                  autoComplete="off"
+                                  onChange={handlemobile}
+                                  value={mobile}
+                                />
+
+                                <PhoneRoundedIcon className="noic" />
+                              </div>
+                              {error && (
+                                <p variant="p" className="error">
+                                  {error.name}
+                                </p>
+                              )}
                             </div>
-                            <div className="form-group mt-2">
-                              <LockIcon />
+                            <div class="input-wrapperr">
                               <input
                                 type="password"
                                 name="logpass"
                                 className="form-style"
-                                placeholder="Your Password"
                                 id="logpass"
+                                required
+                                placeholder="Your Password"
+                                class="inputfield"
                                 autoComplete="off"
+                                onChange={handlePassword}
                                 value={password}
-                                onChange={handlepassword}
                               />
+                              <LockIcon className="noic" />
                             </div>
-                            <a  onClick={handleSubmitR} href="#" className="btn mt-4">
+                            <div className="form-group mt-2">
+                              {error && (
+                                <p variant="p" className="error">
+                                  {error.password}
+                                </p>
+                              )}
+                            </div>
+                            <a
+                              onClick={handleSubmitR}
+                              href="#"
+                              className="btn mt-4"
+                            >
                               Sign Up
                             </a>
                           </div>
