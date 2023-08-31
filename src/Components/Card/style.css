@@ -102,12 +102,14 @@ body {
 }
 
 .title {
-  font-size: 1.2rem;
-  font-weight: 800 !important;
-  line-height: 1.2;
+  padding-top: 3em !important;
+  padding-bottom: 1em !important;
   color: #fff !important;
   text-transform: uppercase;
-  margin-top: 2.2em !important;
+  font-weight: bolder !important;
+  margin: 0 !important;
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
 }
 
 .copy {
@@ -129,6 +131,9 @@ body {
   color: white;
   background-color: #d90000;
   border: none;
+}
+.detailsLink{
+  color: #fff !important;
 }
 .btn:hover {
   background-color: #d90000 !important;

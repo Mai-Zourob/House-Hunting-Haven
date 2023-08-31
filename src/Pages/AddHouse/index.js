@@ -9,10 +9,15 @@ import TableBody from "@mui/material/TableBody";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
 import FormControl from "@mui/material/FormControl";
 import { locationFilter, categoryFilter } from "../../Utils/staticData";
 
 import "./style.css";
+import { Snackbar } from "@mui/material";
 
 function AddHouse() {
   const [title, setTitle] = useState("");
@@ -77,7 +82,7 @@ function AddHouse() {
         image,
       };
       useEffect(() => {
-        fetch("https://my-json-server.typicode.com/SajaRa20/newapi/houses", {
+        fetch("https://my-json-server.typicode.com/urfavmai/mockread-api/houses", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -225,7 +230,7 @@ function AddHouse() {
               <div className="divnum">
                 <TextField
                   variant="outlined"
-                  type="number"
+                  type="text"
                   placeholder="Enter the Space"
                   label="Space"
                   name="Space"
@@ -235,7 +240,7 @@ function AddHouse() {
                 />
                 <TextField
                   variant="outlined"
-                  type="number"
+                  type="text"
                   placeholder="Enter the Price"
                   label="Price ₪"
                   name="price"
@@ -245,8 +250,8 @@ function AddHouse() {
                 />
               </div>
               <Button
-                onClick={handleSubmit}
-                className="btnadd"
+                onClick={() => setOpen(true)}
+                className="house"
                 sx={{
                   marginLeft: "6.8em",
                   width: "190px",
@@ -264,6 +269,30 @@ function AddHouse() {
               >
                 Add
               </Button>
+              <Dialog open={open} onClose={() => setOpen(false)}>
+              <DialogTitle>Confirm Updating</DialogTitle>
+              <DialogContent>
+                {" "}
+                Are you sure you want to update this personal?
+              </DialogContent>
+              <DialogActions>
+                <Button
+                  onClick={() => setOpen(false)}
+                  className="btn-Dialog-Cancel"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  onClick={() => {
+                    handleSubmit();
+                    setOpen(false);
+                  }}
+                  className="btn-Dialog-Updat"
+                >
+                  Update
+                </Button>
+              </DialogActions>
+            </Dialog>
             </FormControl>
           </TableRow>
         </TableBody>

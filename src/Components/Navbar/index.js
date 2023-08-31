@@ -37,9 +37,6 @@ function NavBar() {
     setOpenSnackbar(false);
   };
 
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
   const handleFavorite = () => {
     navigate("/profile");
   };
@@ -62,7 +59,7 @@ function NavBar() {
   };
 
   const handlelogin = () => {
-    navigate("/login");
+    navigate("/register");
   };
 
   const handlregister = () => {
@@ -210,13 +207,12 @@ function NavBar() {
                     bgcolor: "white",
                     fontWeight: "500",
                     "&:hover": {
-                      backgroundColor: "#EB9235",
-                      color: "white",
+                      backgroundColor: "#fff",
+                      color: "#000",
                     },
                   }}
                 >
                   LOGIN
-                  {/* <Link to="/register">Login</Link> */}
                 </Button>
               </Box>
             </>

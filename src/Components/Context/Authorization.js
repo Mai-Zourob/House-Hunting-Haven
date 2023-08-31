@@ -26,7 +26,6 @@ function AuthProvider({ children }) {
 
   useEffect(() => {
     const accessToken = Cookies.get('accessToken');
-    // const refreshToken = Cookies.get('refreshToken');
 
     if (accessToken) {
   setIsAuth(true)

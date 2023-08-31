@@ -60,7 +60,6 @@ function myhouses() {
         setOpenalert(true);
       }
 
-      // Assuming you want to refresh the list of houses after deletion
       const updatedHouses = houses.filter((house) => house.id !== houseId);
       setHouses(updatedHouses);
     } catch (error) {
@@ -73,7 +72,7 @@ function myhouses() {
     (async () => {
       try {
         const response = await fetch(
-          "https://my-json-server.typicode.com/SajaRa20/newapi/houses"
+          "https://my-json-server.typicode.com/urfavmai/mockread-api/houses"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

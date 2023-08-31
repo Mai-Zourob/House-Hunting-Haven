@@ -51,7 +51,7 @@ function ProfileEdit() {
       const user = { username, mobile, email };
 
       const response = await fetch(
-        "https://my-json-server.typicode.com/SajaRa20/newapi/users",
+        "https://my-json-server.typicode.com/urfavmai/mockread-api/users",
         {
           method: "PATCH",
           headers: {
@@ -71,7 +71,7 @@ function ProfileEdit() {
     (async () => {
       try {
         const response = await fetch(
-          "https://my-json-server.typicode.com/SajaRa20/newapi/users"
+          "https://my-json-server.typicode.com/urfavmai/mockread-api/users"
         );
         if (response.ok) {
           const data = await response.json();
@@ -83,50 +83,6 @@ function ProfileEdit() {
 
   return (
     <TableContainer component={Paper}>
-      {/* <Typography
-          variant="h5"
-          textAlign="center"
-          paddingTop="1em"
-          paddingBottom="0.5em"
-          color="#000"
-          fontWeight="bolder"
-        >
-          User Information
-        </Typography>
-        <Table>
-        <TableBody>
-        <div className="profile">
-          <div className="info1">User Name :</div>
-          <div className="info2">Mai Zourob</div>
-          <div className="info1">Email :</div>
-        <div className="info2">maaizourob@gmail.com</div>
-          <div className="info1">Password :</div>
-          <div className="info2">***************</div>
-          <div className="info1">Phone Number :</div>
-        <div className="info2">0597200522</div>
-        <div className="profile-btn">
-        <Button
-          className="btn"
-          sx={{ width: 296 }}
-          variant="outlined"
-          color="error"
-          href="/profileedit"
-          // onClick={onGroupButtonClick}
-        >
-          Edit Profile
-        </Button>
-        <Button
-          className="btn"
-          sx={{ width: 296 }}
-          variant="contained"
-          color="error"
-          // onClick={openPopup}
-        >
-          Delete my account
-        </Button>
-        </div>
-        </div>
-        </TableBody> */}
       <TableBody>
         <Typography
           variant="h5"
@@ -207,7 +163,10 @@ function ProfileEdit() {
                 Are you sure you want to update this personal?
               </DialogContent>
               <DialogActions>
-                <Button onClick={() => setOpen(false)} color="primary">
+                <Button
+                  onClick={() => setOpen(false)}
+                  className="btn-Dialog-Cancel"
+                >
                   Cancel
                 </Button>
                 <Button
@@ -215,7 +174,7 @@ function ProfileEdit() {
                     handleSubmit();
                     setOpen(false);
                   }}
-                  color="primary"
+                  className="btn-Dialog-Updat"
                 >
                   Update
                 </Button>
@@ -233,7 +192,6 @@ function ProfileEdit() {
           </FormControl>
         </TableRow>
       </TableBody>
-      {/* </Table> */}
     </TableContainer>
   );
 }

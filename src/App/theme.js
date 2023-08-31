@@ -1,11 +1,11 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
-    palette: {
-      light: '#EB9235',
-      main: '#2A5555',
-      text: '#7D7D7D',
-    },
+  palette: {
+    light: "#d90000",
+    main: "#4475F2",
+    text: "#000",
+  },
 });
 
 export default theme;

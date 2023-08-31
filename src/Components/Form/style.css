@@ -6,7 +6,10 @@
 }
 .icon {
   margin-top: 1.5em !important;
-  margin-left: 0.5em;
+  margin-right: 0.5em !important;
+  width: 93px !important;
+  height: 37px !important;
+  color: #888b97;
 }
 
 #item1 {
@@ -30,7 +33,7 @@
   background-color: #f2f2f2;
 }
 .b15 {
-  margin-left: 40px;
+  margin-left: 74px;
 }
 .des {
   margin-left: 100px;

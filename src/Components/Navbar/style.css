@@ -7,6 +7,9 @@
   font-weight: bolder !important;
   margin-right: 3em !important;
 }
+.css-r04wx4 {
+  display: flex;
+  margin-left: 4em;}
 .img {
   width: 100px;
   height: 30px;
@@ -26,14 +29,3 @@
 }
 
 
-/* .nav-link::before {
-  content: "" ;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  height: 5px;
-  width: 0;
-  background: var(--raw-seinna);
-  transition: var(--transition-1);
-} */

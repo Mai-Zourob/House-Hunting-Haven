@@ -14,7 +14,6 @@ import CardContainer from "../../Components/CardContainer";
 import { locationFilter, categoryFilter } from "../../Utils/staticData";
 
 import "./style.css";
-import { Accordion } from "@mui/material";
 
 function SearchPage() {
   const [houses, setHouses] = useState([]);
@@ -24,7 +23,6 @@ function SearchPage() {
   const [location, setLocation] = useState();
   const [bedrooms, setBedrooms] = useState(0);
   const [priceRange, setPriceRange] = useState();
-
 
   const handleLocationChange = (event) => {
     setLocation(event.target.value);
@@ -99,35 +97,37 @@ function SearchPage() {
             />
 
             <FormControl className="dropdown" id="location">
-              <InputLabel id="demo-simple-select-helper-label">
-                location
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-helper-label"
-                id="demo-simple-select-helper"
-                value={location}
-                label="Age"
+              <TextField
+                placeholder="Choose the location"
+                className="location"
+                id="filled-select-location"
+                select
+                required
+                label="location"
+                variant="outlined"
+                name="location"
                 onChange={handleLocationChange}
               >
                 {locationFilter.map((item) => (
                   <MenuItem value={item}>{item.toLocaleLowerCase()}</MenuItem>
                 ))}
-              </Select>
+              </TextField>
               <FormControl className="dropdown" id="category">
-                <InputLabel id="demo-simple-select-helper-label">
-                  category
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-helper-label"
-                  id="demo-simple-select-helper"
-                  value={category}
-                  label="Age"
+                <TextField
+                  placeholder="Choose the category"
+                  className="category"
+                  id="filled-select-location"
+                  select
+                  required
+                  label="category"
+                  variant="outlined"
+                  name="category"
                   onChange={handleCategoryChange}
                 >
                   {categoryFilter.map((item) => (
                     <MenuItem value={item}>{item.toLocaleLowerCase()}</MenuItem>
                   ))}
-                </Select>
+                </TextField>
               </FormControl>
             </FormControl>
           </FormControl>
